@@ -2,9 +2,13 @@ import { component$ } from '@builder.io/qwik';
 import type { DocumentHead } from '@builder.io/qwik-city';
 
 export default component$(() => {
+
+  const count = useSignal(0);
+
   return (
     <div>
-    Hello
+    <button onClick$={() => count.value++}>Increment</button>
+    Count : {count.value}
     </div>
   );
 });
